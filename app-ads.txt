@@ -53,3 +53,4 @@ exchange.admazing.co, AM3, RESELLER
 meitu.com, 282, RESELLER
 telaria.com, rwd19-3219219, RESELLER, 1a4e959a1b50034a
 tremorhub.com, rwd19-3219219, RESELLER, 1a4e959a1b50034a
+yandex.com, 40427798, RESELLER
