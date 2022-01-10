@@ -64,3 +64,4 @@ appnexus.com, 9393, RESELLER
 contextweb.com, 562499, RESELLER, 89ff185a4c4e857c
 tremorhub.com, rwd19-3219219, RESELLER, 1a4e959a1b50034a
 google.com, pub-7736280401868789, RESELLER
+google.com, pub-7532529249261841, DIRECT, f08c47fec0942fa0
