@@ -103,3 +103,8 @@ Pubnative.net, 1003601, RESELLER,  d641df8625486a7b
 adcolony.com, 0a0f72cd66122f31, RESELLER, 1ad675c9de6b5176
 adcolony.com, 801e49d1be83b5f9, RESELLER, 1ad675c9de6b5176
 videoheroes.tv, 212499, RESELLER, 064bc410192443d8
+appnexus.com, 13227, RESELLER
+pubmatic.com, 162223, RESELLER, 5d62403b186f2ace
+rhythmone.com, 123476257, RESELLER, a670c89d4a324e47
+rubiconproject.com, 17608, RESELLER, 0bfd66d529a55807
+yandex.com, 95746987, RESELLER
