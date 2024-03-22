@@ -1,1 +1,1 @@
-{"gameName":"Delivery Without Brakes","storeLink":"https://play.google.com/store/apps/details?id=com.OleksandrLypka.DeliveryWithoutBrakes","imageUrls":["https://oleksandrlypka.github.io/CTS_Icon.png"]}
+{"gameName":"Crash Test Simulator","storeLink":"https://play.google.com/store/apps/details?id=com.OleksandrLypka.CrashTestSimulator","imageUrls":["https://oleksandrlypka.github.io/CTS_Icon.png"]}
