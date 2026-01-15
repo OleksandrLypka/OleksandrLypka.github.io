@@ -1,47 +1,358 @@
 <!DOCTYPE html>
-    <html>
-    <head>
-      <meta charset='utf-8'>
-      <meta name='viewport' content='width=device-width'>
-      <title>Main page</title>
-      <style> body { font-family: 'Helvetica Neue', Helvetica, Arial, sans-serif; padding:1em; } </style>
-    </head>
-    <body>
-        <strong><center>Oleksandr Lypka</center></strong>
-        <p>Best gaming experience and next generation solutions for games!</p>
-        <p><strong>Games</strong></p>
-        <ul><li><a href="https://play.google.com/store/apps/details?id=com.OleksandrLypka.DeliveryWithoutBrakes" target="_blank" rel="noopener noreferrer">Stunt City on Google Play</a></ul></li>
-        <ul><li><a href="https://play.google.com/store/apps/details?id=com.OleksandrLypka.CrashTestSimulator" target="_blank" rel="noopener noreferrer">Crash Test Simulator on Google Play</a></ul></li>
-        <ul><li><a href="https://oleksandrlypka.itch.io/crimes-effect" target="_blank" rel="noopener noreferrer">Crimes Effects on itch.io</a></ul></li>
-        <p><strong>Mods</strong></p>
-        <ul><li><a href="https://gta5-mods.com/vehicles/armored-jb700" target="_blank" rel="noopener noreferrer">Armored JB700 for GTA V</a></ul></li>
-        <p><strong>Useful links:</strong></p>
-        <ul><li><a href="https://oleksandrlypka.github.io/FAQ.html" target="_blank" rel="noopener noreferrer">FAQ</a></li></ul>
-        <ul><li><a href="https://play.google.com/store/apps/dev?id=6478734497138640478" target="_blank" rel="noopener noreferrer">Google Play</a></li></ul>
-        <ul><li><a href="https://oleksandrlypka.itch.io/" target="_blank" rel="noopener noreferrer">itch.io</a></li></ul>
-        <ul><li><a href="https://www.gta5-mods.com/users/OleksandrLypka" target="_blank" rel="noopener noreferrer">5Mods</a></li></ul>
-        <p><strong>Stunt City:</strong></p>
-        <ul><li><a href="https://oleksandrlypka.github.io/PrivacyPolicySC.html" target="_blank" rel="noopener noreferrer">Privacy Policy</a></li></ul>
-        <ul><li><a href="https://oleksandrlypka.github.io/TermsAndConditionsSC.html" target="_blank" rel="noopener noreferrer">Terms & Conditions</a></li></ul>
-        <p><strong>Crash Test Simulator:</strong></p>
-        <ul><li><a href="https://oleksandrlypka.github.io/PrivacyPolicyCTS1.html" target="_blank" rel="noopener noreferrer">Privacy Policy</a></li></ul>
-        <ul><li><a href="https://oleksandrlypka.github.io/TermsAndConditionsCTS1.html" target="_blank" rel="noopener noreferrer">Terms & Conditions</a></li></ul>
-        </p> <p><strong>Social Networks</strong></p> <p>
-        </p> <ul><li><a href="https://www.youtube.com/@Oleksandr_Lypka" target="_blank" rel="noopener noreferrer">YouTube</a></li></ul>
-        </p> <ul><li><a href="https://www.youtube.com/@Oleksandr_Lypka_Art" target="_blank" rel="noopener noreferrer">YouTube (second)</a></li></ul>
-        </p> <ul><li><a href="https://www.instagram.com/oleksandr_lypka/" target="_blank" rel="noopener noreferrer">Instagram</a></li></ul>
-        <ul><li><a href="https://x.com/OLypka" target="_blank" rel="noopener noreferrer">X</a></li></ul>
-        <ul><li><a href="https://bsky.app/profile/oleksandrlypka.bsky.social" target="_blank" rel="noopener noreferrer">Bluesky</a></li></ul>
-        <ul><li><a href="https://t.me/OleksandrLypkaGames" target="_blank" rel="noopener noreferrer">Telegram</a></li></ul>
-        <ul><li><a href="https://discord.com/invite/uc6fNRcWS9" target="_blank" rel="noopener noreferrer">Discord</a></li></ul>
-        </p> <p><strong>Contact Me</strong></p> <p>
-        <p>help.oleksandrlypka@ukr.net</p>
-        Support working time from Monday to Friday (9:00 - 17:00 | <a href="https://time.is/en/Kyiv" target="_blank" rel="noopener noreferrer">Check Kyiv time</a> | Exception: government holidays)
-        <strong>
-            <p style="text-align: center">
-                Copyright &copy;
-                <script>document.write(new Date().getFullYear())</script> Oleksandr Lypka
+<html lang="en">
+<head>
+    <meta charset='utf-8'>
+    <meta name='viewport' content='width=device-width, initial-scale=1.0'>
+    <title>Oleksandr Lypka - Home</title>
+    <style>
+        /* --- 1. MAIN BACKGROUND AND LAYOUT --- */
+        body {
+            margin: 0;
+            padding: 0;
+            font-family: 'Helvetica Neue', Helvetica, Arial, sans-serif;
+            /* My signature gradient */
+            background: linear-gradient(135deg, #7fff00, #ffff00);
+            min-height: 100vh;
+            /* Center the card */
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            color: #333;
+        }
+
+        /* --- 2. WHITE CARD (CONTAINER) --- */
+        .card-container {
+            background-color: #ffffff;
+            width: 90%;
+            max-width: 700px;
+            margin: 40px 20px;
+            padding: 40px;
+            border-radius: 20px;
+            box-shadow: 0 15px 40px rgba(0,0,0,0.15);
+            position: relative;
+        }
+
+        /* --- 3. LOGO STYLES --- */
+        .logo-img {
+            display: block;
+            margin: 0 auto 10px auto; /* Сenter and add bottom spacing */
+            max-width: 120px; /* Optimal logo size */
+            height: auto; /* Keep aspect ratio */
+        }
+
+        /* --- 4. TYPOGRAPHY AND ELEMENTS --- */
+        h1 {
+            margin-top: 0;
+            color: #222;
+            text-align: center;
+            font-size: 2.2em;
+        }
+
+        .subtitle {
+            text-align: center;
+            color: #666;
+            font-style: italic;
+            margin-bottom: 30px;
+        }
+
+        h3 {
+            border-bottom: 2px solid #7fff00;
+            padding-bottom: 10px;
+            margin-top: 30px;
+            margin-bottom: 15px;
+            color: #000;
+        }
+
+        ul {
+            list-style-type: none;
+            padding-left: 0;
+        }
+
+        li {
+            margin-bottom: 8px;
+            padding: 8px 12px;
+            border-radius: 6px;
+            transition: background 0.2s;
+        }
+
+            li:hover {
+                background-color: #f9f9f9;
+            }
+
+        a {
+            color: #2e7d32;
+            text-decoration: none;
+            font-weight: 600;
+            display: block;
+        }
+
+            a:hover {
+                text-decoration: underline;
+                color: #1b5e20;
+            }
+
+        /* Legal blocks */
+        .legal-section {
+            font-size: 0.9em;
+            color: #555;
+            background: #f5f5f5;
+            padding: 15px;
+            border-radius: 8px;
+            margin-bottom: 10px;
+        }
+
+            .legal-section strong {
+                display: block;
+                margin-bottom: 5px;
+                color: #000;
+            }
+
+        .legal-links a {
+            display: inline;
+            margin-right: 15px;
+        }
+
+        .contact-info {
+            background-color: #fffde7;
+            padding: 15px;
+            border-radius: 8px;
+            border: 1px solid #fff59d;
+            font-size: 0.95em;
+        }
+
+        .footer {
+            text-align: center;
+            margin-top: 40px;
+            font-size: 0.85em;
+            color: #888;
+            border-top: 1px solid #eee;
+            padding-top: 20px;
+        }
+
+            .footer a {
+                display: inline;
+                color: #888;
+                font-weight: normal;
+                text-decoration: underline;
+            }
+
+        /* --- 5. COOKIE CONSENT --- */
+        .cookie-consent {
+            position: fixed;
+            left: 1rem;
+            right: 1rem;
+            bottom: 1rem;
+            background: #ffffff;
+            color: #333;
+            border: 2px solid #7fff00;
+            padding: 1rem 1.2rem;
+            border-radius: 12px;
+            box-shadow: 0 10px 30px rgba(0,0,0,0.2);
+            display: flex;
+            gap: 1rem;
+            align-items: center;
+            justify-content: space-between;
+            z-index: 9999;
+            max-width: 800px;
+            margin: 0 auto;
+            font-size: 0.95rem;
+        }
+
+        .cookie-consent__message {
+            flex: 1;
+            line-height: 1.5;
+        }
+
+        .cookie-consent__actions {
+            display: flex;
+            gap: 0.8rem;
+            flex-shrink: 0;
+        }
+
+        .cookie-btn {
+            border: none;
+            padding: 0.6rem 1.2rem;
+            border-radius: 8px;
+            cursor: pointer;
+            font-weight: bold;
+            font-size: 0.9rem;
+            transition: transform 0.1s;
+        }
+
+            .cookie-btn:active {
+                transform: scale(0.95);
+            }
+
+        .cookie-btn--accept {
+            background: #7fff00;
+            color: #000;
+            box-shadow: 0 4px 10px rgba(127, 255, 0, 0.4);
+        }
+
+            .cookie-btn--accept:hover {
+                background: #76ea00;
+            }
+
+        .cookie-btn--decline {
+            background: #f0f0f0;
+            color: #555;
+            border: 1px solid #ddd;
+        }
+
+            .cookie-btn--decline:hover {
+                background: #e0e0e0;
+                color: #000;
+            }
+
+        .cookie-link {
+            color: #2e7d32;
+            text-decoration: underline;
+            margin-left: 0.25rem;
+            display: inline;
+            font-weight: bold;
+        }
+
+        @media (max-width:600px) {
+            .cookie-consent {
+                flex-direction: column;
+                align-items: stretch;
+                text-align: left;
+            }
+
+            .cookie-consent__actions {
+                justify-content: flex-end;
+                margin-top: 10px;
+            }
+
+            .card-container {
+                width: auto;
+                padding: 25px;
+                margin: 20px 10px;
+            }
+        }
+    </style>
+</head>
+<body>
+
+    <div class="card-container">
+
+        <img src="OL_Logo.png" alt="Oleksandr Lypka Logo" class="logo-img">
+
+        <h1>Oleksandr Lypka</h1>
+        <div class="subtitle">Best gaming experience and next generation solutions for games!</div>
+
+        <h3>Games</h3>
+        <ul>
+            <li><a href="https://play.google.com/store/apps/details?id=com.OleksandrLypka.DeliveryWithoutBrakes" target="_blank" rel="noopener noreferrer">🎮 Stunt City on Google Play</a></li>
+            <li><a href="https://play.google.com/store/apps/details?id=com.OleksandrLypka.CrashTestSimulator" target="_blank" rel="noopener noreferrer">🚗 Crash Test Simulator on Google Play</a></li>
+            <li><a href="https://oleksandrlypka.itch.io/crimes-effect" target="_blank" rel="noopener noreferrer">🕹️ Crimes Effects on itch.io</a></li>
+        </ul>
+
+        <h3>Mods</h3>
+        <ul>
+            <li><a href="https://gta5-mods.com/vehicles/armored-jb700" target="_blank" rel="noopener noreferrer">🚙 Armored JB700 for GTA V</a></li>
+        </ul>
+
+        <h3>Legal Information</h3>
+
+        <div class="legal-section">
+            <strong>Stunt City:</strong>
+            <div class="legal-links">
+                <a href="https://oleksandrlypka.github.io/PrivacyPolicySC.html" target="_blank" rel="noopener noreferrer">Privacy Policy</a>
+                <a href="https://oleksandrlypka.github.io/TermsAndConditionsSC.html" target="_blank" rel="noopener noreferrer">Terms & Conditions</a>
+            </div>
+        </div>
+
+        <div class="legal-section">
+            <strong>Crash Test Simulator:</strong>
+            <div class="legal-links">
+                <a href="https://oleksandrlypka.github.io/PrivacyPolicyID1.html" target="_blank" rel="noopener noreferrer">Privacy Policy</a>
+                <a href="https://oleksandrlypka.github.io/TermsAndConditionsID1.html" target="_blank" rel="noopener noreferrer">Terms & Conditions</a>
+            </div>
+        </div>
+
+        <div class="legal-section">
+            <strong>General Website Policy:</strong>
+            <div class="legal-links">
+                <a href="https://oleksandrlypka.github.io/PrivacyPolicy.html" target="_blank" rel="noopener noreferrer">Website Privacy Policy</a>
+            </div>
+        </div>
+
+        <h3>Useful Links</h3>
+        <ul>
+            <li><a href="https://oleksandrlypka.github.io/FAQ.html" target="_blank" rel="noopener noreferrer">❓ FAQ</a></li>
+            <li><a href="https://play.google.com/store/apps/dev?id=6478734497138640478" target="_blank" rel="noopener noreferrer">📱 Google Play Profile</a></li>
+            <li><a href="https://oleksandrlypka.itch.io/" target="_blank" rel="noopener noreferrer">👾 itch.io Profile</a></li>
+            <li><a href="https://www.gta5-mods.com/users/OleksandrLypka" target="_blank" rel="noopener noreferrer">🛠️ 5Mods Profile</a></li>
+        </ul>
+
+        <h3>Social Networks</h3>
+        <ul>
+            <li><a href="https://www.youtube.com/@Oleksandr_Lypka" target="_blank" rel="noopener noreferrer">YouTube (Main)</a></li>
+            <li><a href="https://www.youtube.com/@Oleksandr_Lypka_Art" target="_blank" rel="noopener noreferrer">YouTube (Art/Second)</a></li>
+            <li><a href="https://www.instagram.com/oleksandr_lypka/" target="_blank" rel="noopener noreferrer">Instagram</a></li>
+            <li><a href="https://x.com/OLypka" target="_blank" rel="noopener noreferrer">X (Twitter)</a></li>
+            <li><a href="https://bsky.app/profile/oleksandrlypka.bsky.social" target="_blank" rel="noopener noreferrer">Bluesky</a></li>
+            <li><a href="https://t.me/OleksandrLypkaGames" target="_blank" rel="noopener noreferrer">Telegram Channel</a></li>
+            <li><a href="https://discord.com/invite/uc6fNRcWS9" target="_blank" rel="noopener noreferrer">Discord Server</a></li>
+        </ul>
+
+        <h3>Contact Me</h3>
+        <div class="contact-info">
+            <p style="margin-top: 0;"><strong>Email:</strong> help.oleksandrlypka@ukr.net</p>
+            <p style="margin-bottom: 0;">
+                Support working time: Mon-Fri (9:00 - 17:00)<br>
+                <a href="https://time.is/en/Kyiv" target="_blank" rel="noopener noreferrer" style="display:inline; color:#666; font-size: 0.9em; text-decoration:underline;">Check Kyiv time</a><br>
+                <small>(Exception: government holidays)</small>
             </p>
-        </strong>
-    </body>
-    </html>
+        </div>
+
+        <div class="footer">
+            <p>Copyright &copy;
+            <script>document.write(new Date().getFullYear())</script> Oleksandr Lypka</p>
+            <p><a id="change-cookie-settings" href="#" role="button">Change cookie settings</a></p>
+        </div>
+
+    </div>
+
+    <div id="cookie-consent" class="cookie-consent" role="dialog" aria-live="polite" aria-label="Cookie consent" hidden>
+        <div class="cookie-consent__message">
+            This site uses cookies to improve your experience. By clicking "Accept", you agree to our use of cookies.
+            <a class="cookie-link" href="https://oleksandrlypka.github.io/PrivacyPolicy.html" target="_blank" rel="noopener noreferrer">Privacy Policy</a>
+        </div>
+        <div class="cookie-consent__actions">
+            <button id="decline-cookies" class="cookie-btn cookie-btn--decline" type="button">Decline</button>
+            <button id="accept-cookies" class="cookie-btn cookie-btn--accept" type="button">Accept</button>
+        </div>
+    </div>
+
+    <script>
+        (function () {
+            var KEY = 'cookieConsent';
+            var consent = localStorage.getItem(KEY);
+            var banner = document.getElementById('cookie-consent');
+            var acceptBtn = document.getElementById('accept-cookies');
+            var declineBtn = document.getElementById('decline-cookies');
+            var changeLink = document.getElementById('change-cookie-settings');
+
+            function hideBanner() { if (banner) banner.setAttribute('hidden', ''); }
+            function showBanner() { if (banner) banner.removeAttribute('hidden'); }
+            function onAccept() { localStorage.setItem(KEY, 'accepted'); hideBanner(); }
+            function onDecline() { localStorage.setItem(KEY, 'declined'); hideBanner(); }
+
+            if (acceptBtn) acceptBtn.addEventListener('click', onAccept);
+            if (declineBtn) declineBtn.addEventListener('click', onDecline);
+            if (changeLink) {
+                changeLink.addEventListener('click', function (e) {
+                    e.preventDefault();
+                    localStorage.removeItem(KEY);
+                    showBanner();
+                });
+            }
+            if (!consent) {
+                window.addEventListener('load', function () { setTimeout(showBanner, 300); });
+            }
+        })();
+    </script>
+</body>
+</html>

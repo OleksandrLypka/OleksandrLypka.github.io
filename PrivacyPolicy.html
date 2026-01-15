@@ -3,9 +3,9 @@
 <head>
     <meta charset='utf-8'>
     <meta name='viewport' content='width=device-width, initial-scale=1.0'>
-    <title>FAQ</title>
+    <title>Website Privacy Policy</title>
     <style>
-        /* Copy styles from PrivacyPolicy.html above */
+        /* --- My general styles --- */
         body {
             margin: 0;
             padding: 0;
@@ -42,17 +42,6 @@
             color: #000;
         }
 
-        .question {
-            font-weight: bold;
-            margin-top: 15px;
-            color: #2e7d32;
-        }
-
-        .answer {
-            margin-bottom: 15px;
-            margin-left: 10px;
-        }
-
         a {
             color: #2e7d32;
             text-decoration: none;
@@ -63,6 +52,15 @@
                 text-decoration: underline;
             }
 
+        ul {
+            padding-left: 20px;
+        }
+
+        li {
+            margin-bottom: 5px;
+        }
+
+        /* Back button */
         .back-link {
             display: inline-block;
             margin-bottom: 20px;
@@ -72,7 +70,12 @@
             font-size: 0.9em;
         }
 
-        /* Cookie banner styles (I used the full styles from the main PrivacyPolicy file) */
+            .back-link:hover {
+                background: #e0e0e0;
+                text-decoration: none;
+            }
+
+        /* COOKIE BANNER STYLE */
         .cookie-consent {
             position: fixed;
             left: 1rem;
@@ -101,6 +104,7 @@
         .cookie-consent__actions {
             display: flex;
             gap: 0.8rem;
+            flex-shrink: 0;
         }
 
         .cookie-btn {
@@ -109,11 +113,17 @@
             border-radius: 8px;
             cursor: pointer;
             font-weight: bold;
+            transition: transform 0.1s;
         }
+
+            .cookie-btn:active {
+                transform: scale(0.95);
+            }
 
         .cookie-btn--accept {
             background: #7fff00;
             color: #000;
+            box-shadow: 0 4px 10px rgba(127, 255, 0, 0.4);
         }
 
         .cookie-btn--decline {
@@ -122,45 +132,57 @@
             border: 1px solid #ddd;
         }
 
+        .cookie-link {
+            color: #2e7d32;
+            text-decoration: underline;
+            margin-left: 0.25rem;
+            font-weight: bold;
+        }
+
         @media (max-width:600px) {
             .cookie-consent {
                 flex-direction: column;
+                text-align: left;
+            }
+
+            .card-container {
+                padding: 20px;
             }
         }
     </style>
 </head>
 <body>
+
     <div class="card-container">
         <a href="https://oleksandrlypka.github.io" class="back-link">← Back to main page</a>
 
-        <h1>FAQ</h1>
+        <h1>Website Privacy Policy</h1>
+        <p>This Privacy Policy explains how <strong>Oleksandr Lypka</strong> ("We", "Us", "Our") collects, uses, and discloses information when you visit and use the website hosted at <strong>oleksandrlypka.github.io</strong> ("Website").</p>
 
-        <h3>Common</h3>
-        <div class="question">#1 Q: Where are new updates for game/games?</div>
-        <div class="answer">A: I am working on game/games solo. This is my hobby. I not always can find time for make update.</div>
+        <h3>Information We Collect</h3>
+        <ul>
+            <li><strong>Cookies:</strong> We use local storage to remember your cookie consent preferences.</li>
+            <li><strong>Server Logs:</strong> Our hosting provider (GitHub Pages) may collect technical data such as your IP address and browser type for security and maintenance purposes.</li>
+        </ul>
 
-        <div class="question">#2 Q: What does the game version mean?</div>
-        <div class="answer">
-            A: MAJOR.MINOR.PATCH.<br>
-            (Used in other games too with some subjective additions)<br>
-            <strong>MAJOR</strong> - when backwards incompatible changes are made. The major version zero (0.y.z) is intended for initial development. Everything can change at any moment.<br>
-            <strong>MINOR</strong> - when new functionality is added without breaking backward compatibility.<br>
-            <strong>PATCH</strong> - bug fixes.<br><br>
-            When MAJOR changes - MINOR and PATCH resets to zero.<br>
-            When MINOR changes - PATCH resets to zero.<br><br>
-            <em>Example #1: 0.14.1</em> (Major: 0, Minor: 14, Patch: 1)<br>
-            <em>Example #2: 0.7</em> (Major: 0, Minor: 7, Patch: 0)
-        </div>
+        <h3>How We Use Information</h3>
+        <p>We use collected information solely to:</p>
+        <ul>
+            <li>Remember your choice regarding the cookie banner (so you don't see it every time).</li>
+            <li>Ensure the security and proper operation of the Website.</li>
+        </ul>
 
-        <h3>Stunt City</h3>
-        <div class="question">#1 Q: Can you make graphics more realistic?</div>
-        <div class="answer">A: No, this game has its own style of graphics (called "low poly"). I am not planning to change it.</div>
+        <h3>Choices</h3>
+        <p>You can decline the use of local storage for preferences via the banner. If you decline, your preference will not be saved for future visits.</p>
 
-        <h3>Crash Test Simulator</h3>
-        <div class="question">#1 Q: What is pre-alpha?</div>
-        <div class="answer">A: There is already some kind of program that gives an idea of what it will do. Development is underway, adding new functionality, refactoring. The architecture of the program can completely change at any time. At this point, the program can already get a version, usually 0.x.y.</div>
+        <h3>Data Retention</h3>
+        <p>We retain your cookie consent preference in your browser until you clear your browser data or change your choice manually.</p>
+
+        <h3>Contact</h3>
+        <p>If you have questions: <strong>help.oleksandrlypka@ukr.net</strong></p>
 
         <hr style="margin: 30px 0; border: 0; border-top: 1px solid #eee;">
+
         <p style="text-align: center; color: #888; font-size: 0.9em;">
             Copyright &copy;
             <script>document.write(new Date().getFullYear())</script> Oleksandr Lypka<br>
@@ -170,18 +192,29 @@
 
     <div id="cookie-consent" class="cookie-consent" role="dialog" aria-live="polite" aria-label="Cookie consent" hidden>
         <div class="cookie-consent__message">
-            This site uses cookies to improve your experience. <a style="color: #2e7d32;" href="https://oleksandrlypka.github.io/PrivacyPolicy.html">Read Policy</a>
+            This site uses cookies to improve your experience. <a class="cookie-link" href="https://oleksandrlypka.github.io/PrivacyPolicy.html">Read Policy</a>
         </div>
         <div class="cookie-consent__actions">
             <button id="decline-cookies" class="cookie-btn cookie-btn--decline" type="button">Decline</button>
             <button id="accept-cookies" class="cookie-btn cookie-btn--accept" type="button">Accept</button>
         </div>
     </div>
+
     <script>
         (function () {
-            var KEY = 'cookieConsent'; var consent = localStorage.getItem(KEY); var banner = document.getElementById('cookie-consent'); var acceptBtn = document.getElementById('accept-cookies'); var declineBtn = document.getElementById('decline-cookies'); var changeLink = document.getElementById('change-cookie-settings');
-            function hideBanner() { if (banner) banner.setAttribute('hidden', ''); } function showBanner() { if (banner) banner.removeAttribute('hidden'); } function onAccept() { localStorage.setItem(KEY, 'accepted'); hideBanner(); } function onDecline() { localStorage.setItem(KEY, 'declined'); hideBanner(); }
-            if (acceptBtn) acceptBtn.addEventListener('click', onAccept); if (declineBtn) declineBtn.addEventListener('click', onDecline); if (changeLink) { changeLink.addEventListener('click', function (e) { e.preventDefault(); localStorage.removeItem(KEY); showBanner(); }); }
+            var KEY = 'cookieConsent';
+            var consent = localStorage.getItem(KEY);
+            var banner = document.getElementById('cookie-consent');
+            var acceptBtn = document.getElementById('accept-cookies');
+            var declineBtn = document.getElementById('decline-cookies');
+            var changeLink = document.getElementById('change-cookie-settings');
+            function hideBanner() { if (banner) banner.setAttribute('hidden', ''); }
+            function showBanner() { if (banner) banner.removeAttribute('hidden'); }
+            function onAccept() { localStorage.setItem(KEY, 'accepted'); hideBanner(); }
+            function onDecline() { localStorage.setItem(KEY, 'declined'); hideBanner(); }
+            if (acceptBtn) acceptBtn.addEventListener('click', onAccept);
+            if (declineBtn) declineBtn.addEventListener('click', onDecline);
+            if (changeLink) { changeLink.addEventListener('click', function (e) { e.preventDefault(); localStorage.removeItem(KEY); showBanner(); }); }
             if (!consent) { window.addEventListener('load', function () { setTimeout(showBanner, 300); }); }
         })();
     </script>
