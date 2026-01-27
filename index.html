@@ -35,12 +35,65 @@
         /* --- 3. LOGO STYLES --- */
         .logo-img {
             display: block;
-            margin: 0 auto 10px auto; /* Сenter and add bottom spacing */
-            max-width: 120px; /* Optimal logo size */
-            height: auto; /* Keep aspect ratio */
+            margin: 0 auto 10px auto;
+            max-width: 120px;
+            height: auto;
         }
 
-        /* --- 4. TYPOGRAPHY AND ELEMENTS --- */
+        /* --- 4. GAME CARDS STYLES (NEW) --- */
+        .games-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(140px, 1fr));
+            gap: 20px;
+            margin-bottom: 30px;
+        }
+
+        .game-card {
+            background-color: #f9f9f9;
+            border-radius: 16px;
+            padding: 20px;
+            text-align: center;
+            text-decoration: none;
+            transition: transform 0.2s, box-shadow 0.2s;
+            border: 1px solid #eee;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+        }
+
+            .game-card:hover {
+                transform: translateY(-5px);
+                box-shadow: 0 10px 20px rgba(0,0,0,0.1);
+                background-color: #fff;
+                border-color: #7fff00; /* Lime border on hover */
+            }
+
+        .game-icon {
+            width: 80px;
+            height: 80px;
+            border-radius: 18px; /* App icon style */
+            margin-bottom: 12px;
+            box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+            object-fit: cover;
+        }
+
+        .game-title {
+            font-weight: bold;
+            color: #222;
+            margin-bottom: 5px;
+            font-size: 0.95em;
+            line-height: 1.3;
+        }
+
+        .game-platform {
+            font-size: 0.8em;
+            color: #666;
+            background: #e0e0e0;
+            padding: 2px 8px;
+            border-radius: 10px;
+        }
+
+        /* --- 5. TYPOGRAPHY AND ELEMENTS --- */
         h1 {
             margin-top: 0;
             color: #222;
@@ -86,10 +139,16 @@
             display: block;
         }
 
-            a:hover {
-                text-decoration: underline;
-                color: #1b5e20;
-            }
+        /* Fix link color inside cards so they don't turn green */
+        .game-card a {
+            text-decoration: none;
+        }
+
+        /* Standard links hover */
+        ul a:hover, .legal-links a:hover, .footer a:hover {
+            text-decoration: underline;
+            color: #1b5e20;
+        }
 
         /* Legal blocks */
         .legal-section {
@@ -136,7 +195,7 @@
                 text-decoration: underline;
             }
 
-        /* --- 5. COOKIE CONSENT --- */
+        /* --- 6. COOKIE CONSENT --- */
         .cookie-consent {
             position: fixed;
             left: 1rem;
@@ -158,9 +217,9 @@
             font-size: 0.95rem;
         }
 
-        .cookie-consent[hidden] {
-            display: none !important;
-        }
+            .cookie-consent[hidden] {
+                display: none !important;
+            }
 
         .cookie-consent__message {
             flex: 1;
@@ -233,6 +292,10 @@
                 padding: 25px;
                 margin: 20px 10px;
             }
+            /* Mobile Grid: 2 columns if space allows, or 1 */
+            .games-grid {
+                grid-template-columns: repeat(auto-fit, minmax(130px, 1fr));
+            }
         }
     </style>
 </head>
@@ -246,12 +309,26 @@
         <div class="subtitle">Best gaming experience and next generation solutions for games!</div>
 
         <h3>Games</h3>
-        <ul>
-            <li><a href="https://play.google.com/store/apps/details?id=com.OleksandrLypka.DeliveryWithoutBrakes" target="_blank" rel="noopener noreferrer">🎮 Stunt City on Google Play</a></li>
-            <li><a href="https://play.google.com/store/apps/details?id=com.OleksandrLypka.CrashTestSimulator" target="_blank" rel="noopener noreferrer">🚗 Crash Test Simulator on Google Play</a></li>
-            <li><a href="https://oleksandrlypka.itch.io/crimes-effect" target="_blank" rel="noopener noreferrer">🕹️ Crimes Effects on itch.io</a></li>
-        </ul>
 
+        <div class="games-grid">
+            <a href="https://play.google.com/store/apps/details?id=com.OleksandrLypka.DeliveryWithoutBrakes" target="_blank" rel="noopener noreferrer" class="game-card">
+                <img src="SC_Icon.png" alt="Stunt City Icon" class="game-icon">
+                <div class="game-title">Stunt City</div>
+                <div class="game-platform">Google Play</div>
+            </a>
+
+            <a href="https://play.google.com/store/apps/details?id=com.OleksandrLypka.CrashTestSimulator" target="_blank" rel="noopener noreferrer" class="game-card">
+                <img src="CTS_Icon.png" alt="Crash Test Simulator Icon" class="game-icon">
+                <div class="game-title">Crash Test<br>Simulator</div>
+                <div class="game-platform">Google Play</div>
+            </a>
+
+            <a href="https://oleksandrlypka.itch.io/crimes-effect" target="_blank" rel="noopener noreferrer" class="game-card">
+                <img src="CE_Icon.png" alt="Crimes Effects Icon" class="game-icon">
+                <div class="game-title">Crimes Effects</div>
+                <div class="game-platform">itch.io</div>
+            </a>
+        </div>
         <h3>Mods</h3>
         <ul>
             <li><a href="https://gta5-mods.com/vehicles/armored-jb700" target="_blank" rel="noopener noreferrer">🚙 Armored JB700 for GTA V</a></li>
@@ -312,8 +389,10 @@
         </div>
 
         <div class="footer">
-            <p>Copyright &copy;
-            <script>document.write(new Date().getFullYear())</script> Oleksandr Lypka</p>
+            <p>
+                Copyright &copy;
+                <script>document.write(new Date().getFullYear())</script> Oleksandr Lypka
+            </p>
             <p><a id="change-cookie-settings" href="#" role="button">Change cookie settings</a></p>
         </div>
 
