@@ -10,10 +10,8 @@
             margin: 0;
             padding: 0;
             font-family: 'Helvetica Neue', Helvetica, Arial, sans-serif;
-            /* My signature gradient */
             background: linear-gradient(135deg, #7fff00, #ffff00);
             min-height: 100vh;
-            /* Center the card */
             display: flex;
             justify-content: center;
             align-items: center;
@@ -40,7 +38,7 @@
             height: auto;
         }
 
-        /* --- 4. GAME CARDS STYLES (NEW) --- */
+        /* --- 4. GAME CARDS STYLES --- */
         .games-grid {
             display: grid;
             grid-template-columns: repeat(auto-fit, minmax(140px, 1fr));
@@ -65,13 +63,13 @@
                 transform: translateY(-5px);
                 box-shadow: 0 10px 20px rgba(0,0,0,0.1);
                 background-color: #fff;
-                border-color: #7fff00; /* Lime border on hover */
+                border-color: #7fff00;
             }
 
         .game-icon {
             width: 80px;
             height: 80px;
-            border-radius: 18px; /* App icon style */
+            border-radius: 18px;
             margin-bottom: 12px;
             box-shadow: 0 4px 8px rgba(0,0,0,0.1);
             object-fit: cover;
@@ -91,6 +89,7 @@
             background: #e0e0e0;
             padding: 2px 8px;
             border-radius: 10px;
+            white-space: nowrap; /* So that the year and text don't break up ugly */
         }
 
         /* --- 5. TYPOGRAPHY AND ELEMENTS --- */
@@ -139,18 +138,18 @@
             display: block;
         }
 
-        /* Fix link color inside cards so they don't turn green */
         .game-card a {
             text-decoration: none;
         }
+        /* Fix for cards */
 
-        /* Standard links hover */
+        /* Links Hover */
         ul a:hover, .legal-links a:hover, .footer a:hover {
             text-decoration: underline;
             color: #1b5e20;
         }
 
-        /* Legal blocks */
+        /* Legal & Footer */
         .legal-section {
             font-size: 0.9em;
             color: #555;
@@ -292,7 +291,7 @@
                 padding: 25px;
                 margin: 20px 10px;
             }
-            /* Mobile Grid: 2 columns if space allows, or 1 */
+
             .games-grid {
                 grid-template-columns: repeat(auto-fit, minmax(130px, 1fr));
             }
@@ -311,23 +310,25 @@
         <h3>Games</h3>
 
         <div class="games-grid">
-            <a href="https://play.google.com/store/apps/details?id=com.OleksandrLypka.DeliveryWithoutBrakes" target="_blank" rel="noopener noreferrer" class="game-card">
-                <img src="SC_Icon.png" alt="Stunt City Icon" class="game-icon">
-                <div class="game-title">Stunt City</div>
-                <div class="game-platform">Google Play</div>
-            </a>
 
             <a href="https://play.google.com/store/apps/details?id=com.OleksandrLypka.CrashTestSimulator" target="_blank" rel="noopener noreferrer" class="game-card">
                 <img src="CTS_Icon.png" alt="Crash Test Simulator Icon" class="game-icon">
                 <div class="game-title">Crash Test<br>Simulator</div>
-                <div class="game-platform">Google Play</div>
+                <div class="game-platform">2022 • Google Play</div>
             </a>
 
             <a href="https://oleksandrlypka.itch.io/crimes-effect" target="_blank" rel="noopener noreferrer" class="game-card">
                 <img src="CE_Icon.png" alt="Crimes Effects Icon" class="game-icon">
                 <div class="game-title">Crimes Effects</div>
-                <div class="game-platform">itch.io</div>
+                <div class="game-platform">2022 • itch.io</div>
             </a>
+
+            <a href="https://play.google.com/store/apps/details?id=com.OleksandrLypka.DeliveryWithoutBrakes" target="_blank" rel="noopener noreferrer" class="game-card">
+                <img src="SC_Icon.png" alt="Stunt City Icon" class="game-icon">
+                <div class="game-title">Stunt City</div>
+                <div class="game-platform">2021 • Google Play</div>
+            </a>
+
         </div>
         <h3>Mods</h3>
         <ul>
