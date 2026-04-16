@@ -52,7 +52,6 @@
             border-radius: 16px;
             padding: 20px;
             text-align: center;
-            text-decoration: none;
             transition: transform 0.2s, box-shadow 0.2s;
             border: 1px solid #eee;
             display: flex;
@@ -92,6 +91,44 @@
             border-radius: 10px;
             white-space: nowrap;
             /* So that the year and text don't break up ugly */
+        }
+
+        .game-actions {
+            display: flex;
+            gap: 8px;
+            flex-wrap: wrap;
+            justify-content: center;
+            margin-top: 14px;
+        }
+
+        .game-btn {
+            display: inline-block;
+            padding: 8px 12px;
+            border-radius: 10px;
+            font-size: 0.82em;
+            font-weight: bold;
+            text-decoration: none;
+            color: #000;
+            background: #7fff00;
+            border: 1px solid #76ea00;
+            transition: transform 0.2s, box-shadow 0.2s, background-color 0.2s;
+        }
+
+        .game-btn:hover {
+            transform: translateY(-2px);
+            box-shadow: 0 6px 14px rgba(127, 255, 0, 0.3);
+            background-color: #76ea00;
+            text-decoration: none;
+        }
+
+        .game-btn--secondary {
+            background: #fff;
+            border-color: #ddd;
+            color: #2e7d32;
+        }
+
+        .game-btn--secondary:hover {
+            background: #f7fff0;
         }
 
         /* --- 5. TYPOGRAPHY AND ELEMENTS --- */
@@ -347,12 +384,17 @@
 
         <div class="games-grid">
 
-            <a href="https://play.google.com/store/apps/details?id=com.OleksandrLypka.CrashTestSimulator"
-               target="_blank" rel="noopener noreferrer" class="game-card">
+            <div class="game-card">
                 <img src="ID_Icon.png" alt="Impact Drive Icon" class="game-icon">
                 <div class="game-title">Impact Drive</div>
                 <div class="game-platform">2022 • Google Play</div>
-            </a>
+                <div class="game-actions">
+                    <a href="https://play.google.com/store/apps/details?id=com.OleksandrLypka.CrashTestSimulator"
+                       target="_blank" rel="noopener noreferrer" class="game-btn">Google Play</a>
+                    <a href="https://youtu.be/KNPz4oLVeFQ"
+                       target="_blank" rel="noopener noreferrer" class="game-btn game-btn--secondary">YouTube Trailer</a>
+                </div>
+            </div>
 
             <a href="https://oleksandrlypka.itch.io/crimes-effect" target="_blank" rel="noopener noreferrer"
                class="game-card">
@@ -361,12 +403,17 @@
                 <div class="game-platform">2022 • itch.io</div>
             </a>
 
-            <a href="https://play.google.com/store/apps/details?id=com.OleksandrLypka.DeliveryWithoutBrakes"
-               target="_blank" rel="noopener noreferrer" class="game-card">
+            <div class="game-card">
                 <img src="SC_Icon.png" alt="Stunt City Icon" class="game-icon">
                 <div class="game-title">Stunt City</div>
                 <div class="game-platform">2021 • Google Play</div>
-            </a>
+                <div class="game-actions">
+                    <a href="https://play.google.com/store/apps/details?id=com.OleksandrLypka.DeliveryWithoutBrakes"
+                       target="_blank" rel="noopener noreferrer" class="game-btn">Google Play</a>
+                    <a href="https://youtu.be/6c5XNfhsZOE"
+                       target="_blank" rel="noopener noreferrer" class="game-btn game-btn--secondary">YouTube Trailer</a>
+                </div>
+            </div>
         </div>
 
         <a href="https://forms.gle/CWivMV43n8EPGbwX9" target="_blank" rel="noopener noreferrer" class="feedback-btn" style="margin-top: 0; margin-bottom: 30px;">
