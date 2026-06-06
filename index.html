@@ -90,7 +90,23 @@
             padding: 2px 8px;
             border-radius: 10px;
             white-space: nowrap;
-            /* So that the year and text don't break up ugly */
+        }
+
+        /* Game Status Badges */
+        .game-status {
+            font-size: 0.75em;
+            margin-top: 8px;
+            font-weight: bold;
+            text-transform: uppercase;
+            letter-spacing: 0.5px;
+        }
+
+        .status-prototype {
+            color: #f57c00; /* Orange color for prototype */
+        }
+
+        .status-discontinued {
+            color: #d32f2f; /* Red color for discontinued */
         }
 
         .game-actions {
@@ -129,6 +145,21 @@
 
         .game-btn--secondary:hover {
             background: #f7fff0;
+        }
+
+        /* Inactive button styling */
+        .game-btn--inactive {
+            background-color: #e0e0e0;
+            border-color: #ccc;
+            color: #888;
+            cursor: not-allowed;
+            pointer-events: none;
+        }
+
+        .game-btn--inactive:hover {
+            transform: none;
+            box-shadow: none;
+            background-color: #e0e0e0;
         }
 
         /* --- 5. TYPOGRAPHY AND ELEMENTS --- */
@@ -180,8 +211,6 @@
         .game-card a {
             text-decoration: none;
         }
-
-        /* Fix for cards */
 
         /* Links Hover */
         ul a:hover,
@@ -396,20 +425,24 @@
                 </div>
             </div>
 
-            <a href="https://oleksandrlypka.itch.io/crimes-effect" target="_blank" rel="noopener noreferrer"
-               class="game-card">
+            <div class="game-card">
                 <img src="CE_Icon.png" alt="Crimes Effects Icon" class="game-icon">
                 <div class="game-title">Crimes Effects</div>
                 <div class="game-platform">2022 • itch.io</div>
-            </a>
+                <div class="game-status status-prototype">Prototype</div>
+                <div class="game-actions">
+                    <a href="https://oleksandrlypka.itch.io/crimes-effect" 
+                       target="_blank" rel="noopener noreferrer" class="game-btn">itch.io</a>
+                </div>
+            </div>
 
             <div class="game-card">
                 <img src="SC_Icon.png" alt="Stunt City Icon" class="game-icon">
                 <div class="game-title">Stunt City</div>
                 <div class="game-platform">2021 • Google Play</div>
+                <div class="game-status status-discontinued">Development discontinued</div>
                 <div class="game-actions">
-                    <a href="https://play.google.com/store/apps/details?id=com.OleksandrLypka.DeliveryWithoutBrakes"
-                       target="_blank" rel="noopener noreferrer" class="game-btn">Google Play</a>
+                    <span class="game-btn game-btn--inactive">Unavailable</span>
                     <a href="https://youtu.be/6c5XNfhsZOE"
                        target="_blank" rel="noopener noreferrer" class="game-btn game-btn--secondary">YouTube Trailer</a>
                 </div>
