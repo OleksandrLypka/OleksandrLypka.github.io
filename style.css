@@ -1,0 +1,429 @@
+/* --- 1. MAIN BACKGROUND AND LAYOUT --- */
+body {
+    margin: 0;
+    padding: 0;
+    font-family: 'Helvetica Neue', Helvetica, Arial, sans-serif;
+    background: linear-gradient(135deg, #7fff00, #ffff00);
+    min-height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    color: #333;
+}
+
+/* --- 2. WHITE CARD (CONTAINER) --- */
+.card-container {
+    background-color: #ffffff;
+    width: 90%;
+    max-width: 700px;
+    margin: 40px 20px;
+    padding: 40px;
+    border-radius: 20px;
+    box-shadow: 0 15px 40px rgba(0, 0, 0, 0.15);
+    position: relative;
+    line-height: 1.6;
+}
+
+/* --- 3. LOGO STYLES --- */
+.logo-img {
+    display: block;
+    margin: 0 auto 10px auto;
+    max-width: 120px;
+    height: auto;
+}
+
+/* --- 4. GAME CARDS STYLES --- */
+.games-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(140px, 1fr));
+    gap: 20px;
+    margin-bottom: 30px;
+}
+
+.game-card {
+    background-color: #f9f9f9;
+    border-radius: 16px;
+    padding: 20px;
+    text-align: center;
+    transition: transform 0.2s, box-shadow 0.2s;
+    border: 1px solid #eee;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.game-card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 10px 20px rgba(0, 0, 0, 0.1);
+    background-color: #fff;
+    border-color: #7fff00;
+}
+
+.game-icon {
+    width: 80px;
+    height: 80px;
+    border-radius: 18px;
+    margin-bottom: 12px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    object-fit: cover;
+}
+
+.game-title {
+    font-weight: bold;
+    color: #222;
+    margin-bottom: 5px;
+    font-size: 0.95em;
+    line-height: 1.3;
+}
+
+.game-platform {
+    font-size: 0.8em;
+    color: #666;
+    background: #e0e0e0;
+    padding: 2px 8px;
+    border-radius: 10px;
+    white-space: nowrap;
+}
+
+/* Game Status Badges */
+.game-status {
+    font-size: 0.75em;
+    margin-top: 8px;
+    font-weight: bold;
+    text-transform: uppercase;
+    letter-spacing: 0.5px;
+}
+
+.status-prototype {
+    color: #f57c00; /* Orange color for prototype */
+}
+
+.status-discontinued {
+    color: #d32f2f; /* Red color for discontinued */
+}
+
+.game-actions {
+    display: flex;
+    gap: 8px;
+    flex-wrap: wrap;
+    justify-content: center;
+    margin-top: 14px;
+}
+
+.game-btn {
+    display: inline-block;
+    padding: 8px 12px;
+    border-radius: 10px;
+    font-size: 0.82em;
+    font-weight: bold;
+    text-decoration: none;
+    color: #000;
+    background: #7fff00;
+    border: 1px solid #76ea00;
+    transition: transform 0.2s, box-shadow 0.2s, background-color 0.2s;
+}
+
+.game-btn:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 6px 14px rgba(127, 255, 0, 0.3);
+    background-color: #76ea00;
+    text-decoration: none;
+}
+
+.game-btn--secondary {
+    background: #fff;
+    border-color: #ddd;
+    color: #2e7d32;
+}
+
+.game-btn--secondary:hover {
+    background: #f7fff0;
+}
+
+/* Inactive button styling */
+.game-btn--inactive {
+    background-color: #e0e0e0;
+    border-color: #ccc;
+    color: #888;
+    cursor: not-allowed;
+    pointer-events: none;
+}
+
+.game-btn--inactive:hover {
+    transform: none;
+    box-shadow: none;
+    background-color: #e0e0e0;
+}
+
+/* --- 5. TYPOGRAPHY AND ELEMENTS --- */
+h1 {
+    margin-top: 0;
+    color: #222;
+    text-align: center;
+    font-size: 2.2em;
+}
+
+.subtitle {
+    text-align: center;
+    color: #666;
+    font-style: italic;
+    margin-bottom: 30px;
+}
+
+h3 {
+    border-bottom: 2px solid #7fff00;
+    padding-bottom: 10px;
+    margin-top: 30px;
+    margin-bottom: 15px;
+    color: #000;
+}
+
+ul {
+    list-style-type: none;
+    padding-left: 0;
+}
+
+li {
+    margin-bottom: 8px;
+    padding: 8px 12px;
+    border-radius: 6px;
+    transition: background 0.2s;
+}
+
+li:hover {
+    background-color: #f9f9f9;
+}
+
+a {
+    color: #2e7d32;
+    text-decoration: none;
+    font-weight: 600;
+}
+
+.game-card a {
+    text-decoration: none;
+}
+
+/* Links Hover */
+ul a:hover,
+.legal-links a:hover,
+.footer a:hover {
+    text-decoration: underline;
+    color: #1b5e20;
+}
+
+.back-link {
+    display: inline-block;
+    margin-bottom: 20px;
+    padding: 8px 15px;
+    background: #f0f0f0;
+    border-radius: 20px;
+    font-size: 0.9em;
+    color: #555;
+}
+
+.back-link:hover {
+    background: #e0e0e0;
+    text-decoration: none;
+}
+
+.cross-link {
+    text-align: center;
+    margin-bottom: 30px;
+    display: block;
+    font-size: 0.95em;
+}
+
+/* Legal & Footer */
+.legal-section {
+    font-size: 0.9em;
+    color: #555;
+    background: #f5f5f5;
+    padding: 15px;
+    border-radius: 8px;
+    margin-bottom: 10px;
+}
+
+.legal-section strong {
+    display: block;
+    margin-bottom: 5px;
+    color: #000;
+}
+
+.legal-links a {
+    display: inline;
+    margin-right: 15px;
+}
+
+.contact-info {
+    background-color: #fffde7;
+    padding: 15px;
+    border-radius: 8px;
+    border: 1px solid #fff59d;
+    font-size: 0.95em;
+}
+
+.footer {
+    text-align: center;
+    margin-top: 40px;
+    font-size: 0.85em;
+    color: #888;
+    border-top: 1px solid #eee;
+    padding-top: 20px;
+}
+
+.footer a {
+    display: inline;
+    color: #888;
+    font-weight: normal;
+    text-decoration: underline;
+}
+
+/* Misc texts inside pages */
+p {
+    margin-bottom: 1em;
+}
+
+.question {
+    font-weight: bold;
+    margin-top: 15px;
+    color: #2e7d32;
+}
+
+.answer {
+    margin-bottom: 15px;
+    margin-left: 10px;
+}
+
+/* --- FEEDBACK BUTTON --- */
+.feedback-btn {
+    display: block;
+    background-color: #7fff00;
+    color: #000;
+    padding: 12px 20px;
+    border-radius: 10px;
+    text-align: center;
+    font-weight: bold;
+    font-size: 1.05em;
+    margin-top: 20px;
+    text-decoration: none;
+    transition: transform 0.2s, box-shadow 0.2s, background-color 0.2s;
+    box-shadow: 0 4px 12px rgba(127, 255, 0, 0.3);
+    border: 2px solid transparent;
+}
+
+.feedback-btn:hover {
+    transform: translateY(-3px);
+    background-color: #76ea00;
+    box-shadow: 0 6px 15px rgba(127, 255, 0, 0.4);
+    color: #000;
+    text-decoration: none;
+}
+
+.feedback-btn:active {
+    transform: translateY(0);
+    box-shadow: 0 2px 8px rgba(127, 255, 0, 0.2);
+}
+
+/* --- 6. COOKIE CONSENT --- */
+.cookie-consent {
+    position: fixed;
+    left: 1rem;
+    right: 1rem;
+    bottom: 1rem;
+    background: #ffffff;
+    color: #333;
+    border: 2px solid #7fff00;
+    padding: 1rem 1.2rem;
+    border-radius: 12px;
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.2);
+    display: flex;
+    gap: 1rem;
+    align-items: center;
+    justify-content: space-between;
+    z-index: 9999;
+    max-width: 800px;
+    margin: 0 auto;
+    font-size: 0.95rem;
+}
+
+.cookie-consent[hidden] {
+    display: none !important;
+}
+
+.cookie-consent__message {
+    flex: 1;
+    line-height: 1.5;
+}
+
+.cookie-consent__actions {
+    display: flex;
+    gap: 0.8rem;
+    flex-shrink: 0;
+}
+
+.cookie-btn {
+    border: none;
+    padding: 0.6rem 1.2rem;
+    border-radius: 8px;
+    cursor: pointer;
+    font-weight: bold;
+    font-size: 0.9rem;
+    transition: transform 0.1s;
+}
+
+.cookie-btn:active {
+    transform: scale(0.95);
+}
+
+.cookie-btn--accept {
+    background: #7fff00;
+    color: #000;
+    box-shadow: 0 4px 10px rgba(127, 255, 0, 0.4);
+}
+
+.cookie-btn--accept:hover {
+    background: #76ea00;
+}
+
+.cookie-btn--decline {
+    background: #f0f0f0;
+    color: #555;
+    border: 1px solid #ddd;
+}
+
+.cookie-btn--decline:hover {
+    background: #e0e0e0;
+    color: #000;
+}
+
+.cookie-link {
+    color: #2e7d32;
+    text-decoration: underline;
+    margin-left: 0.25rem;
+    display: inline;
+    font-weight: bold;
+}
+
+@media (max-width:600px) {
+    .cookie-consent {
+        flex-direction: column;
+        align-items: stretch;
+        text-align: left;
+    }
+
+    .cookie-consent__actions {
+        justify-content: flex-end;
+        margin-top: 10px;
+    }
+
+    .card-container {
+        width: auto;
+        padding: 25px;
+        margin: 20px 10px;
+    }
+
+    .games-grid {
+        grid-template-columns: repeat(auto-fit, minmax(130px, 1fr));
+    }
+}
