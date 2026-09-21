@@ -207,7 +207,9 @@ a {
 /* Links Hover */
 ul a:hover,
 .legal-links a:hover,
-.footer a:hover {
+.footer a:hover,
+.contact-info a:hover,
+a.contact-email:hover {
     text-decoration: underline;
     color: #1b5e20;
 }

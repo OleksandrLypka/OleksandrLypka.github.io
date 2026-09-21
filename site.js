@@ -1,4 +1,15 @@
+// --- Global Site Configuration ---
+var CONTACT_EMAIL = 'help.oleksandrlypka@ukr.net';
+
 document.addEventListener("DOMContentLoaded", function() {
+    // --- 1. Populate Contact Email ---
+    var emailLinks = document.querySelectorAll('.contact-email');
+    emailLinks.forEach(function(el) {
+        el.href = 'mailto:' + CONTACT_EMAIL;
+        el.textContent = CONTACT_EMAIL;
+    });
+
+    // --- 2. Cookie Consent Banner ---
     var KEY = 'cookieConsent';
     var consent = localStorage.getItem(KEY);
 
